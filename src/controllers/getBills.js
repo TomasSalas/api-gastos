@@ -30,13 +30,12 @@ export const getBills = async (req, res) => {
     if (billsData.length === 0) {
       return res.status(404).json({ error: 'No bills found for this user' })
     }
-
     const bills = billsData.map(bill => ({
       type: bill.type,
       amount: bill.amount,
       date: bill.date,
       description: bill.description,
-      subType: bill.subType,
+      subtype: bill.subtype,
     }))
 
     res.status(200).json({

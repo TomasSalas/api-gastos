@@ -37,7 +37,7 @@ export const BillsModel = (sequelize) => {
       onUpdate: 'CASCADE',
       onDelete: 'RESTRICT',
     },
-    subType: {
+    subtype: {
       type: DataTypes.STRING,
       allowNull: true,
     },
