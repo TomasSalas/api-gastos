@@ -1,6 +1,6 @@
 import { UserModel } from '../models/user.js'
 import sequelize from '../config/index.js'
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
 
 const User = UserModel(sequelize)
