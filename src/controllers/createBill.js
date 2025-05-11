@@ -7,9 +7,9 @@ const User = UserModel(sequelize)
 
 export const createBill = async (req, res) => {
   try {
-    const { email, type, amount, date, description } = req.body
+    const { email, type, amount, date, description, subType } = req.body
 
-    if (!email || !type || !amount || !date || !description) {
+    if (!email || !type || !amount || !date || !description || !subType) {
       return res.status(400).json({ error: 'All fields are required' })
     }
 
@@ -25,6 +25,7 @@ export const createBill = async (req, res) => {
       amount,
       date,
       description,
+      subType
     })
 
     res.status(201).json({
@@ -34,6 +35,7 @@ export const createBill = async (req, res) => {
         amount: newBill.amount,
         date: newBill.date,
         description: newBill.description,
+        subType: newBill.subType,
       },
     })
   } catch (error) {

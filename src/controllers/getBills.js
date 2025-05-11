@@ -36,6 +36,7 @@ export const getBills = async (req, res) => {
       amount: bill.amount,
       date: bill.date,
       description: bill.description,
+      subType: bill.subType,
     }))
 
     res.status(200).json({
