@@ -14,7 +14,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://app-gastos.railway.internal'],
+  origin: ['http://localhost:5173', 'https://app-gastos-production.up.railway.app/'],
   credentials: true
 }))
 
